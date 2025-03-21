@@ -76,6 +76,15 @@ for (let i = 0; i < cars.length; i++) {
     Scrivi del codice per aggiungere un nuovo oggetto in ultima posizione nell'array "cars", rispettando la struttura degli altri elementi.
     Successivamente, rimuovi l'ultimo elemento della proprietà "trims" da ogni auto.
 */
+const modello1 = cars[1];
+const newObject = Object.assign({}, modello1, {
+  brand: "Tesla",
+  model: "model-s",
+  color: "blue",
+  trims: ["berlina", "full-opt", "eco"],
+});
+cars.push(newObject);
+console.log(cars);
 
 for (let i = 0; i < cars.length; i++) {
   cars[i].trims.pop();
